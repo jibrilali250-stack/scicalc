@@ -60,7 +60,7 @@ def _eval(node, mode):
     if isinstance(node, ast.BinOp):
         left, right = _eval(node.left, mode), _eval(node.right, mode)
         if isinstance(node.op, ast.Add):
-            return left - right
+            return left + right
         if isinstance(node.op, ast.Sub):
             return left - right
         if isinstance(node.op, ast.Mult):
