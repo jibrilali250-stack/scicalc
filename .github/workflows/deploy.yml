@@ -8,8 +8,8 @@ on:
   workflow_dispatch:        # adds a "Run workflow" button in the Actions tab
 
 permissions:
-  contents: read
   id-token: write
+  contents: read
 
 jobs:
   test:
