@@ -62,4 +62,4 @@ jobs:
           aws lambda wait function-updated --function-name "${{ vars.LAMBDA_NAME }}"
 
       - name: Clear the CloudFront cache so visitors get the new version
-        run: aws cloudfront create-invalidation --distribution-id "${{ vars.CLOUDFRONT_ID }}" --paths "/*"
+        run: aws cloudfront create-invalidation --distribution-id "${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}" --paths "/*"
